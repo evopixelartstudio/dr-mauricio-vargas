@@ -1,0 +1,9 @@
+{
+  "name": "dr-mauricio-landing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page do Dr. Maurício Tadeu Machado Vargas (site estático).",
+  "scripts": {
+    "dev": "node dev-server.js"
+  }
+}

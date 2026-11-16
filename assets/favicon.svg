@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#0F2A1E"/>
+  <g fill="none" stroke="#C9A45C" stroke-width="2" stroke-linecap="round">
+    <path d="M32 8v10M20 12h24M22 12l-4 8M22 12l4 8M42 12l-4 8M42 12l4 8M17 20h10M37 20h10"/>
+  </g>
+  <text x="32" y="52" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="26" font-weight="700" fill="#C9A45C">MT</text>
+</svg>

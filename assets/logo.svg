@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Monograma MT">
+  <!-- Monograma provisório MT com balança da justiça. Substitua por assets/logo.png quando disponível. -->
+  <defs>
+    <linearGradient id="g" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="120" y2="120">
+      <stop offset="0" stop-color="#E3C887"/>
+      <stop offset=".55" stop-color="#C9A45C"/>
+      <stop offset="1" stop-color="#A9843F"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#g)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Balança -->
+    <circle cx="60" cy="9" r="2.6" fill="url(#g)"/>
+    <path d="M60 12v34"/>
+    <path d="M30 20h60"/>
+    <path d="M34 20l-8 17M34 20l8 17M86 20l-8 17M86 20l8 17"/>
+    <path d="M24 37a10 4.5 0 0 0 20 0zM76 37a10 4.5 0 0 0 20 0z" fill="url(#g)" fill-opacity=".18"/>
+    <path d="M52 46h16"/>
+  </g>
+  <text x="60" y="98" text-anchor="middle" font-family="'Cormorant Garamond','Playfair Display',Georgia,serif" font-size="50" font-weight="600" letter-spacing="1" fill="url(#g)">MT</text>
+  <path d="M28 108h64" stroke="url(#g)" stroke-width="1.2"/>
+</svg>
