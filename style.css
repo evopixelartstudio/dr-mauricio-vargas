@@ -387,6 +387,8 @@ section[tabindex="-1"]:focus, main[tabindex="-1"]:focus { outline: none; }
   overflow-y: auto;
 }
 .nav.is-open { transform: translateX(0); visibility: visible; transition: transform .45s var(--ease), visibility 0s; }
+/* Menu fechado sai do layout para não gerar rolagem lateral no celular */
+.nav:not(.is-open):not(.is-closing) { display: none; }
 .nav__list { display: flex; flex-direction: column; }
 .nav__link {
   display: block;
@@ -1133,7 +1135,7 @@ mark.edit {
   position: absolute;
   bottom: -1px;
   left: 50%;
-  width: min(560px, 120%);
+  width: min(560px, 100%);
   height: 73px;
   transform: translateX(-50%);
   fill: var(--cream);
@@ -1331,7 +1333,9 @@ mark.edit {
   .menu-toggle { display: none; }
   .nav-overlay { display: none !important; }
 
-  .nav {
+  .nav,
+  .nav:not(.is-open):not(.is-closing) {
+    display: flex;
     position: static;
     width: auto;
     height: auto;

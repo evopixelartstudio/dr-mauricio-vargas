@@ -37,8 +37,15 @@ const MENSAGEM = "Olá, Dr. Maurício! Vim pelo site e gostaria de agendar uma c
   const overlay = document.querySelector(".nav-overlay");
   const desktopQuery = window.matchMedia("(min-width: 1024px)");
 
+  let closeTimer;
+
   function openMenu() {
+    clearTimeout(closeTimer);
+    // Exibe o painel fora da tela, força o reflow e então anima a entrada
+    nav.classList.add("is-closing");
+    void nav.offsetWidth;
     nav.classList.add("is-open");
+    nav.classList.remove("is-closing");
     overlay.hidden = false;
     requestAnimationFrame(function () { overlay.classList.add("is-visible"); });
     toggle.setAttribute("aria-expanded", "true");
@@ -50,7 +57,9 @@ const MENSAGEM = "Olá, Dr. Maurício! Vim pelo site e gostaria de agendar uma c
 
   function closeMenu(returnFocus) {
     if (!nav.classList.contains("is-open")) return;
+    nav.classList.add("is-closing");
     nav.classList.remove("is-open");
+    closeTimer = setTimeout(function () { nav.classList.remove("is-closing"); }, 460);
     overlay.classList.remove("is-visible");
     setTimeout(function () { overlay.hidden = true; }, 350);
     toggle.setAttribute("aria-expanded", "false");
