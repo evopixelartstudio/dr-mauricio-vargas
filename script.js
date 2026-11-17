@@ -5,7 +5,7 @@
 /* ============ CONFIGURAÇÃO DO WHATSAPP ============
    Edite apenas estas duas linhas. Formato do número:
    55 + DDD + número, só dígitos. Ex.: "5531999999999"   */
-const WHATSAPP = "55[DDD][NÚMERO]";
+const WHATSAPP = "553892004634";
 const MENSAGEM = "Olá, Dr. Maurício! Vim pelo site e gostaria de agendar uma conversa.";
 
 (function () {
@@ -223,8 +223,8 @@ const MENSAGEM = "Olá, Dr. Maurício! Vim pelo site e gostaria de agendar uma c
 
     if (mg && routes) {
       const m = center(mg);
-      // Ponto de origem (aprox. região central-sul de MG). Ajuste se desejar.
-      const origin = { x: m.x + m.b.width * 0.12, y: m.y + m.b.height * 0.12 };
+      // Ponto de origem: Pirapora/MG (posição proporcional dentro do contorno de MG)
+      const origin = { x: m.b.x + m.b.width * 0.55, y: m.b.y + m.b.height * 0.36 };
 
       mapSvg.querySelectorAll(".map__states path").forEach(function (state, i) {
         if (state === mg) return;
